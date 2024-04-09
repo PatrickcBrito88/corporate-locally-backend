@@ -10,7 +10,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-import java.util.Map;
 
 @Service
 public class SecretsManagerServiceImpl implements SecretsManagerService {
@@ -46,13 +45,13 @@ public class SecretsManagerServiceImpl implements SecretsManagerService {
                 return secretsJson;
             } catch (IOException e) {
                 throw new NegocioException(
-                        MessageUtils.getMensagemValidacao(
+                        MessageUtils.buscaMensagemValidacao(
                                 "secrets.manager.credenciais.erro.buscar", secretPath, e
                         )
                 );
             }
         } else {
-            throw new NullPointerException(MessageUtils.getMensagemValidacao("credencial.nao.encontrada"));
+            throw new NullPointerException(MessageUtils.buscaMensagemValidacao("credencial.nao.encontrada"));
         }
     }
 
