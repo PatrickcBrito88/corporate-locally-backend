@@ -1,0 +1,1 @@
+aws --endpoint http://localhost:4566 --profile localstack ssm put-parameter --name "/config/corporate-locally-backend_localstack/path_secrets_manager_token_temperatura_cidade" --value "/secret/corporate-locally-backend_localstack/key_temperatura_cidade" --type String --region us-east-1
