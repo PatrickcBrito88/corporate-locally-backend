@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: corporate-locally-backend
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: localstack
+
+aws:
+  paramstore:
+    enabled: true
+    endpoint: http://localhost:4566
+    secretsmanager:
+      enabled: false
+      endpoint: http://localhost:4566
