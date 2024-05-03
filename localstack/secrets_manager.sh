@@ -1,0 +1,1 @@
+aws --endpoint http://localhost:4566 secretsmanager create-secret --name /secret/corporate-locally-backend_localstack/key_temperatura_cidade --secret-string '{"token":"0bbccdb927msh08e1ebaba66d054p18a1d1jsn050f852744c6"}' --region us-east-1
